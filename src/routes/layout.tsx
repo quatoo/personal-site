@@ -1,12 +1,14 @@
 import { component$, Slot } from '@builder.io/qwik';
 import { routeLoader$ } from '@builder.io/qwik-city';
-import { fetchBuilder, MemoryCache } from 'node-fetch-cache';
+import NodeCache from 'node-cache';
 
 import Header from '~/components/starter/header/header';
 import Footer from '~/components/starter/footer/footer';
 
 const aWeekInMs = 604800000;
-const fetch = fetchBuilder.withCache(new MemoryCache({ ttl: aWeekInMs }));
+const aHourInSeconds = 3600;
+
+const cache = new NodeCache( { stdTTL: aWeekInMs, checkperiod: aHourInSeconds } );
 
 export const useServerTimeLoader = routeLoader$(() => {
   return {
@@ -29,8 +31,14 @@ interface PostItem {
 }
 
 export const usePostsLoader = routeLoader$(async () => {
-  const res = await fetch(fourFutureUrl);
-  const posts = (await res.json()) as PostItem[];
+  let posts = cache.get("fourFuture");
+  
+  if (posts == undefined) {
+    const res = await fetch(fourFutureUrl);
+    posts = (await res.json()) as PostItem[];
+    cache.set("fourFuture", posts);
+  }
+
   return posts;
 });
 

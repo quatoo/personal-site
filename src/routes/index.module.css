@@ -1,0 +1,37 @@
+.presentation {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+.helloContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 700px;
+}
+
+.helloText h1 {
+  font-family: 'Hero New';
+  font-weight: 200;
+  font-size: clamp(1rem, 2.5vw, 1.8rem); 
+  line-height: 1.8;
+}
+
+.helloText h1 span:first-of-type {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .presentation {
+    flex-direction: column;
+  }
+}

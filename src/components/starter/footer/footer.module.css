@@ -1,0 +1,12 @@
+.footer {
+  font-family: 'Hero New';
+  color: #686868 !important;
+  display: block;
+  font-size: 0.8rem;
+  text-align: right;
+  text-decoration: none;
+}
+
+.spacer {
+  padding: 0 15px;
+}

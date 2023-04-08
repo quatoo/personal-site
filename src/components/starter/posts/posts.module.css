@@ -1,0 +1,42 @@
+.posts h3{
+  font-family: 'Consolas';
+  font-style: normal;
+  font-weight: 100;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.postItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.postItem h2 {
+  font-family: 'Consolas';
+  font-size: 26px;
+  color: rgba(255, 255, 255, 0.8);
+
+  margin-bottom: 0;
+}
+
+.postItem small {
+  font-family: 'Consolas';
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.postItem p {
+  font-family: 'Consolas';
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.postItem a {
+  align-self: end;
+  font-family: 'Hero New';
+  font-weight: 100;
+  font-size: 14px;
+  color: #00FFAB;
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "filipe-borges-personal-site",
+  "short_name": "Hey there Im Filipe",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#07060C",
+  "description": "This is my personal site to group everything about my professional journey."
+}

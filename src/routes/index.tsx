@@ -4,15 +4,13 @@ import Social from '~/components/starter/social/social';
 import styles from './index.module.css';
 import Posts from '~/components/starter/posts/posts';
 
-// import Counter from '~/components/starter/counter/counter';
-
 
 export default component$(() => {
   return (
     <div class="container">
       <div class="section">
         <div class={styles.presentation}>
-          <img class={styles.avatar} src="/img/me/512.webp"/>
+          <img class={styles.avatar} src="/img/me/512.webp" alt="face of me, Filipe Borges Pereira"/>
 
           <div class={styles.helloContainer}>
             <div class={styles.helloText}>
@@ -42,8 +40,9 @@ export const head: DocumentHead = {
     },
   ],
   links: [
-    { href: '/fonts/Multicolore.otf', rel: 'stylesheet', type: 'font/otf' },
-    { href: '/fonts/Hero-New-Regular.otf', rel: 'stylesheet', type: 'font/otf' },
-    { href: '/fonts/Consolas.otf', rel: 'stylesheet', type: 'font/ttf' },
+    { href: '/fonts/Multicolore.otf', rel: 'preload', as: 'font', type: 'font/otf' },
+    { href: '/fonts/Hero-New-Regular.otf', rel: 'preload', as: 'font', type: 'font/otf' },
+    { href: '/fonts/Hero-New-UltraLight.otf', rel: 'preload', as: 'font', type: 'font/otf' },
+    { href: '/fonts/Consolas.ttf', rel: 'preload', as: 'font', type: 'font/ttf' },
   ]
 };

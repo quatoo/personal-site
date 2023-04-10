@@ -44,5 +44,6 @@ export const head: DocumentHead = {
   links: [
     { href: '/fonts/Multicolore.otf', rel: 'stylesheet', type: 'font/otf' },
     { href: '/fonts/Hero-New-Regular.otf', rel: 'stylesheet', type: 'font/otf' },
+    { href: '/fonts/Consolas.otf', rel: 'stylesheet', type: 'font/ttf' },
   ]
 };

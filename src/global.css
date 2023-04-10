@@ -22,6 +22,11 @@
   src: url(/fonts/Multicolore.otf);
 }
 
+@font-face {
+  font-family: 'Consolas';
+  src: url(/fonts/Consolas.ttf);
+}
+
 body {
   background: #07060C;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;

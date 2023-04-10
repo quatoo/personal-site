@@ -31,7 +31,7 @@ interface PostItem {
 }
 
 export const usePostsLoader = routeLoader$(async () => {
-  let posts = cache.get("fourFuture");
+  let posts = cache.get("fourFuture") as PostItem[];
   
   if (posts == undefined) {
     const res = await fetch(fourFutureUrl);

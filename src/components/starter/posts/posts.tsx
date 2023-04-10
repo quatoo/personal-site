@@ -1,18 +1,16 @@
 import { component$ } from '@builder.io/qwik';
-// import { JSDOM } from 'jsdom';
 import styles from './posts.module.css';
 import { usePostsLoader } from '~/routes/layout';
 
 
-// function normalizeExcerpt(excerpt: string) {
-  // const DOM = new JSDOM(excerpt, { contentType: 'text/html' });
+function normalizeExcerpt(excerpt: string) {
+  const replace = excerpt
+                    .replace(/<\/?[^>]+(>|$)/gi, "")
+                    .replace(/&#\d+;/gi, "")
+                    .replace("[]", "");
 
-  // const paragraph = DOM.window.document.body.querySelector('p');
-  // const readMore = paragraph!.querySelector('a');
-  // readMore?.remove();
-
-  // return paragraph!.textContent || paragraph!.innerText;
-//}
+  return replace;
+}
 
 function transformDate(date: string) {
   const realDate = new Date(date);
@@ -30,8 +28,7 @@ export default component$(() => {
         <div key={`item-${index}`} class={styles.postItem}>
           <h2 dangerouslySetInnerHTML={item.title.rendered}></h2>
           <small>{transformDate(item.date)}</small>
-          {/* <p>{normalizeExcerpt(item.excerpt.rendered)} ...</p> */}
-          <p>{item.excerpt.rendered}</p>
+          <p>{normalizeExcerpt(item.excerpt.rendered)} ...</p>
 
           <a href={item.link} title={item.title.rendered} target="_blank">
             Continue lendo

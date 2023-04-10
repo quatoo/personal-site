@@ -12,6 +12,16 @@
   --theme-accent: #00FFAB;
 }
 
+@font-face {
+  font-family: 'Hero New';
+  src: url(/fonts/Hero-New-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Multicolore';
+  src: url(/fonts/Multicolore.otf);
+}
+
 body {
   background: #07060C;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;

@@ -29,8 +29,6 @@ jobs:
           api_location: "./azure-functions" # Api source code path - optional
           output_location: "./dist" # Built app content directory - optional
           skip_api_build: true
-        env:
-          CI: false
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
